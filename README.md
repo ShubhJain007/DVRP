@@ -22,8 +22,7 @@ git clone https://github.com/ShubhJain007/DVRP.git
 cd DVRP
 ```
 
-### 2. Set Up the Environment
-Follow the [setup guide](setup/setup_guide.md) to install dependencies and set up Julia.
+### 2. Set Up the Julia Environment
 
 ### 3. Run the Simulation
 ```bash
