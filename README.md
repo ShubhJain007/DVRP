@@ -2,21 +2,51 @@
 
 For more details on implementation and explain kindly review the attached presentation in the repo.
 
-# iccps-2022-paratransit-public
 
-Please follow the instructions below.
+# Dynamic Vehicle Routing Problem (DVRP)
 
-Setup data:
-* data link: https://drive.google.com/file/d/1VgtalQ5nongWwxrrfeoC2_NMLyCvyglq/view?usp=sharing
-* Unzip data directory and place at top level: paratransit-mdp/data.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Julia Version](https://img.shields.io/badge/Julia-v1.6+-blue)](https://julialang.org/)
 
-Main simulation executable is bin/sim_proc.jl.
+This repository contains a project implementation for solving the **Dynamic Vehicle Routing Problem (DVRP)**. It includes tools for data preparation, simulation, and analysis, tailored to optimize dynamic routing in cyber-physical systems.
 
-Data preparation is int dataprep/ directory. Summary of data preparation steps:
-* dataprep/prepare_trips.ipynb: prepares trips for the simulations in data/CARTA/processed
-* dataprep/chains.ipynb: prepares test set and generative demand model data in data/CARTA/processed
-* dataprep/travel_time_matrix.ipynb: generates the travel time matrix in data/travel_time_matrix
-* dataprep/travel_time_matrix_congestion.ipynb: creates the congested travel time matrix.
-* dataprep/paper_figs.ipynb: formats results for latex to be presented in the paper.
+## Features
+- **Data Preparation**: Tools for processing raw trip data and generating travel time matrices.
+- **Dynamic Simulation**: Real-time routing using the ICAPS baseline model (DRLSA).
+- **Analysis**: Visualizations and outputs for evaluating performance.
 
-paratransit-mdp/ICAPS directory contains the source code for the ICAPS baseline (DRLSA).
+## Quick Start
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ShubhJain007/DVRP.git
+cd DVRP
+```
+
+### 2. Set Up the Environment
+Follow the [setup guide](setup/setup_guide.md) to install dependencies and set up Julia.
+
+### 3. Run the Simulation
+```bash
+cd bin
+julia sim_proc.jl
+```
+
+## Repository Structure
+- **`data/`**: Raw and processed datasets for the DVRP simulations.
+- **`dataprep/`**: Scripts for preparing trip data and travel time matrices.
+- **`bin/`**: Main simulation executable (`sim_proc.jl`).
+- **`docs/`**: Project documentation.
+- **`examples/`**: Example inputs and outputs for DVRP simulations.
+- **`results/`**: Output data from simulations.
+
+## Documentation
+Detailed documentation is available in the [docs/](docs/) folder:
+- [Introduction](docs/introduction.md)
+- [Simulation Workflow](docs/simulation_workflow.md)
+- [Usage Examples](docs/usage_examples.md)
+
+## Contributing
+We welcome contributions! See [CONTRIBUTING.md](docs/contributing.md) for more information.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
